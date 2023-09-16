@@ -13,6 +13,11 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -51,13 +56,20 @@ button {
 body {
   font-family: var(--font-family-primery);
   line-height: 1.25;
+
   letter-spacing: 0.03em;
   background-color: var(--primery-bg-color);
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   /* outline: 1px solid tomato; */
-  width: 1030px;
+  max-width: 1030px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -77,6 +89,10 @@ body {
 }
 
 /* Header */
+
+.main {
+  flex: 1 1 auto;
+}
 
 .header {
   padding: 20px 0;
@@ -109,11 +125,14 @@ body {
 
 /* Main */
 
+.main {
+}
+
 /* Post */
 
 .content {
   width: 75%;
-  flex-shrink: 2;
+  /* flex-shrink: 2; */
 }
 
 .post-header {
@@ -157,10 +176,11 @@ body {
 
 .aside {
   width: 25%;
+  flex-grow: 1;
 }
 
 .search-joke {
-  width: 250px;
+  width: 100%;
   height: 35px;
   padding: 6px 8px;
 }
@@ -168,6 +188,7 @@ body {
 /* Footer */
 
 .footer {
+  max-width: 100%;
   text-align: center;
 }
 
@@ -197,10 +218,14 @@ body {
   margin-top: 10px;
 }
 
+.lateral-menu-list {
+  width: 100%;
+}
+
 .lateral-menu-item {
   text-align: left;
   color: gray;
-  width: 248px;
+  /* width: 248px; */
   height: 31px;
 
   padding: 6px 10px;
