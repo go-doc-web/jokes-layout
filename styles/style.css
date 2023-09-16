@@ -185,6 +185,13 @@ body {
   padding: 6px 8px;
 }
 
+/* Pagination  */
+
+.pagination {
+  padding: 20px;
+  display: flex;
+}
+
 /* Footer */
 
 .footer {
